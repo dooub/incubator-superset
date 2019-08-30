@@ -41,6 +41,8 @@ RUN apt-get install -y vim less postgresql-client redis-tools
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
     && apt-get install -y nodejs
 
+RUN apt-get install -y libsasl2-2 sasl2-bin libsasl2-modules
+
 WORKDIR /home/superset
 
 COPY requirements.txt .
